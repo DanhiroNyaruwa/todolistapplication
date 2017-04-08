@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>My todos</h2>
+<hr>
+
+<ul>
+    {% for todo in todos %}
+    <li><a href="{% url 'detail' todo.id %}">{{todo.title}}</a> {{ todo.text }}</li>
+    {% endfor %}
+
+</ul>
+<a href="{% url 'add' %}">Add todo </a>
+</body>
+</html>
